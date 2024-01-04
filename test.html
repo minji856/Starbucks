@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css" rel="stylesheet">
+    <style>
+        div {
+            width: 200px;
+            height: 100px;
+            background-color: orange;
+        }
+        .swiper {
+        width: 600px;
+        height: 300px;
+        }
+    </style>
+
+    <!-- https://swiperjs.com/ -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+</head>
+<body>
+    <div>Hello Wolrd</div>
+    <ul>
+        <li>사과</li>
+        <li>배</li>
+        <li>귤</li>
+    </ul>
+    <!-- BEM(Block Elemnet Modifier) : 요소__일부분,요소--상태-->
+    <div class="container">
+        <div class="name"></div>
+        <div class="item">
+            <div class="name"></div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="container__name"></div> <!--요소의 일부분으로써 사용-->
+        <div class="item">
+            <div class="item__name"></div>
+        </div>
+    </div>
+
+    <div class="btn primary"></div>
+    <div class="btn success"></div>
+    <div class="btn error"></div>
+
+    <div class="btn--primary"></div> <!-- 요소의 상태를 표시 -->
+    <div class="btn--success"></div>
+    <div class="btn--error"></div>
+
+    <hr/>
+
+    <!-- Slider main container -->
+    <div class="swiper"> <!--swiper랑 wrapper는 무조건있어야함-->
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">Slide 1</div>
+            <div class="swiper-slide">Slide 2</div>
+            <div class="swiper-slide">Slide 3</div>
+            ...
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    const swiper = new Swiper('.swiper', {
+        // Optional parameters
+        direction: 'vertical',
+        loop: true,
+        autoplay:true
+    });
+</script>
